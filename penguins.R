@@ -1,9 +1,7 @@
 data <- read.csv("penguins.csv")
-
 x <- data$bill_length_mm
-hist(x, breaks = seq(40, 60, 4))
-hist(x, breaks = seq(40, 60, 2))
-hist(x, breaks = seq(40, 60, 1))
-png("penguins-hist.png")
-hist(x, breaks = seq(40, 60, 2), xlab = "Bill length, mm")
+
+png("penguins-boxplot.png")
+boxplot(x, ylab = "Bill length, mm")
+dev.off()
 dev.off()
